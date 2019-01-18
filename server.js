@@ -40,16 +40,20 @@ app.get('/', (req, res) => {
   // res.send({ name: 'Marcus', likes: ['Biking', 'Cookings'] });
   res.render('home', {
     pageTitle: ' Home Page Test',
-    welcomeMessage: 'Welcome to my website',
-    currentYear: new Date().getFullYear()
+    welcomeMessage: 'Welcome to my website'
   });
 });
 
 app.get('/about', (req, res) => {
   // res.send('About Page');
   res.render('about', {
-    pageTitle: 'About Page Test',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'About Page Test'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects', {
+    pageTitle: 'Projects'
   });
 });
 
